@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('math-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: absolute;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+}
+
+.loading-bar {
+    width: 100px;
+    height: 10px;
+    background: #3498db;
+    animation: loading 2s infinite;
+    margin-bottom: 10px;
+}
+
+@keyframes loading {
+    0% { width: 0; }
+    100% { width: 100px; }
+}
+
+.loading-text {
+    font-size: 18px;
+    color: #3498db;
+}
+
+.calculator {
+    display: none;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background: white;
+    resize: both;
+    overflow: auto;
+}
+
+.calculator-screen {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: #ddd;
+    text-align: right;
+    padding-right: 10px;
+    font-size: 24px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.calculator-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.number-btn {
+    background: linear-gradient(45deg, #1e3c72, #2a5298);
+}
+
+.number-btn:hover {
+    background: linear-gradient(45deg, #2a5298, #1e3c72);
+}
+
+.function-btn {
+    background: linear-gradient(45deg, #6c757d, #495057);
+}
+
+.function-btn:hover {
+    background: linear-gradient(45deg, #495057, #6c757d);
+}
