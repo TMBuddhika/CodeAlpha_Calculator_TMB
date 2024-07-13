@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let operator = '';
     let previousInput = '';
 
-    // Hide loader and show calculator after 2 seconds
+   //TO END THE LOADING SCREEN
     setTimeout(() => {
         loadingContainer.style.display = 'none';
         calculator.style.display = 'block';
